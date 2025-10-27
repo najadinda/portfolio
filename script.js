@@ -19,7 +19,6 @@ menu.addEventListener("click", (e) => {
   }
 });
 
-
 // Tutup menu mobile kalau balik ke desktop
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {
@@ -38,7 +37,7 @@ window.addEventListener("scroll", () => {
 
 new Typed("#typed-name", {
   strings: [
- 'Ayudhya <span class="text-pink-500">Naja</span> Adinda'
+    'Ayudhya <span class="text-pink-500">Naja</span> Adinda'
   ],
   typeSpeed: 80,
   backSpeed: 50,

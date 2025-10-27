@@ -1,16 +1,24 @@
+// Ambil elemen yang dibutuhkan
 const btn = document.getElementById("menu-btn");
 const menu = document.getElementById("mobile-menu");
 const header = document.getElementById("main-header");
 
-// Toggle menu mobile
+// Toggle menu saat tombol diklik
 btn.addEventListener("click", () => {
   menu.classList.toggle("hidden");
+  menu.classList.toggle("opacity-0");
+  menu.classList.toggle("scale-95");
 });
 
-// Tutup menu setelah klik link
-menu.addEventListener("click", () => {
-  menu.classList.add("hidden");
+// Tutup menu otomatis setelah klik salah satu link
+menu.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    menu.classList.add("hidden");
+    menu.classList.add("opacity-0");
+    menu.classList.add("scale-95");
+  }
 });
+
 
 // Tutup menu mobile kalau balik ke desktop
 window.addEventListener("resize", () => {
@@ -29,7 +37,9 @@ window.addEventListener("scroll", () => {
 });
 
 new Typed("#typed-name", {
-  strings: ["Ayudhya Naja Adinda"],
+  strings: [
+ 'Ayudhya <span class="text-pink-500">Naja</span> Adinda'
+  ],
   typeSpeed: 80,
   backSpeed: 50,
   loop: false,

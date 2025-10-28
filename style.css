@@ -20,8 +20,9 @@ body {
 }
 
 .scrolled {
-  background-color: #ffa6c1;
+  background-color: #fb6f92;
   backdrop-filter: blur(0px);
   border-color: transparent;
   transition: all 0.3s ease-in-out;
+  color: white;
 }
